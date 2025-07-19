@@ -1,7 +1,7 @@
 {
   "$GMSprite":"",
   "%Name":"spr_wall",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":31,
   "bbox_left":0,
   "bbox_right":31,
@@ -23,7 +23,7 @@
   ],
   "name":"spr_wall",
   "nineSlice":null,
-  "origin":0,
+  "origin":7,
   "parent":{
     "name":"Sprites",
     "path":"folders/Sprites.yy",
@@ -77,8 +77,8 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
-    "yorigin":0,
+    "xorigin":16,
+    "yorigin":32,
   },
   "swatchColours":null,
   "swfPrecision":0.5,

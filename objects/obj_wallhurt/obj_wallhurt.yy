@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_wallhurt",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_wallhurt",
   "overriddenProperties":[],
@@ -31,8 +33,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_wallhurt",
-    "path":"sprites/spr_wallhurt/spr_wallhurt.yy",
+    "name":"spr_spiked_wall",
+    "path":"sprites/spr_spiked_wall/spr_spiked_wall.yy",
   },
   "spriteMaskId":null,
   "visible":true,
