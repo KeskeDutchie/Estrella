@@ -53,3 +53,5 @@ if (array_length(global.lights) > 0) {
 else {
     draw_self();
 }
+
+draw_sprite_ext(spr_ghost_eyes, image_index, x, y, image_xscale, 1, 0, c_white, 0.4);

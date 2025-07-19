@@ -65,6 +65,7 @@
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
     {"id":{"name":"spr_eye_panel","path":"sprites/spr_eye_panel/spr_eye_panel.yy",},},
     {"id":{"name":"spr_floorboards","path":"sprites/spr_floorboards/spr_floorboards.yy",},},
+    {"id":{"name":"spr_ghost_eyes","path":"sprites/spr_ghost_eyes/spr_ghost_eyes.yy",},},
     {"id":{"name":"spr_ghost","path":"sprites/spr_ghost/spr_ghost.yy",},},
     {"id":{"name":"spr_lever_off","path":"sprites/spr_lever_off/spr_lever_off.yy",},},
     {"id":{"name":"spr_lever_on","path":"sprites/spr_lever_on/spr_lever_on.yy",},},
