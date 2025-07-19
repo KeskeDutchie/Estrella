@@ -9,6 +9,6 @@ if (place_meeting(x, y, obj_player)) {
     pause_timer = 3*60;
 }
 
-
+image_xscale = sign(obj_player.x - x); 
 
 depth = -y + room_height * 0.5;
