@@ -59,6 +59,7 @@
     {"id":{"name":"snd_star","path":"sounds/snd_star/snd_star.yy",},},
     {"id":{"name":"snd_step","path":"sounds/snd_step/snd_step.yy",},},
     {"id":{"name":"spr_clock","path":"sprites/spr_clock/spr_clock.yy",},},
+    {"id":{"name":"spr_death_message","path":"sprites/spr_death_message/spr_death_message.yy",},},
     {"id":{"name":"spr_door_locked","path":"sprites/spr_door_locked/spr_door_locked.yy",},},
     {"id":{"name":"spr_door_unlocked","path":"sprites/spr_door_unlocked/spr_door_unlocked.yy",},},
     {"id":{"name":"spr_enemy","path":"sprites/spr_enemy/spr_enemy.yy",},},
