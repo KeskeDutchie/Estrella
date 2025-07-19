@@ -7,4 +7,7 @@ draw_rectangle(window_get_width()*(1/64), window_get_height()*(1/3)+(window_get_
 draw_set_color(c_green);
 draw_rectangle(window_get_width()*(1/64), window_get_height()*(1/3)+(window_get_height()*(1/3))*((100-hp_visual)/100), window_get_width()*(2/64), window_get_height()*(2/3), false);
 
+draw_set_color(c_white)
 draw_text(window_get_width()*(2/64), window_get_height()*(1/2), string_concat(hp_visual, "%"));
+
+draw_clock(32, 32, 32, (time/max_time), c_white);

@@ -23,7 +23,7 @@ if (x_velocity == 0 && y_velocity == 0)
 }
 else
 {
-	image_speed = 1;
+	image_speed = 1 * _sprint_input;
 	var _sprite = sprite_index;
 	if (x_velocity > 0)
 	{
@@ -45,15 +45,15 @@ else
 }
 
 if (!place_free(x + x_velocity, y)) {
-	if (place_meeting(x + x_velocity, y, obj_wallhurt)) {
-		take_damage(obj_wallhurt.damage);
+	if (place_meeting(x + x_velocity, y, obj_hurt)) {
+		take_damage(obj_hurt.damage);
 	}
 	x_velocity = 0;
 }
 
 if (!place_free(x, y + y_velocity)) {
-	if (place_meeting(x, y + y_velocity, obj_wallhurt)) {
-		take_damage(obj_wallhurt.damage);
+	if (place_meeting(x, y + y_velocity, obj_hurt)) {
+		take_damage(obj_hurt.damage);
 	}
 	y_velocity = 0;
 }

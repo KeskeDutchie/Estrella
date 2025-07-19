@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureGroup>
+  <texture scale="1" mipsToGenerate="0" texwidth="256" texheight="256">default_0.bz2</texture>
+  <texture scale="1" mipsToGenerate="0" texwidth="512" texheight="256">default_1.bz2</texture>
+  <tpe x="0" y="0" tpage="default_0.bz2">_filter_underwater_noise_sprite__filter_underwater_65d62f09-8194-4115-9cc4-ad2fdfff9926.tpe</tpe>
+  <tpe x="4" y="4" tpage="default_1.bz2">ts_wall_edges_Estrella_output_tileset.tpe</tpe>
+  <tpe x="2" y="190" tpage="default_1.bz2">spr_wall_edges_Estrella_0b02b1df-2f93-4806-b751-55e40f3d0a67.tpe</tpe>
+  <tpe x="190" y="2" tpage="default_1.bz2">spr_door_locked_Estrella_685b2b4b-94d7-4808-a7c2-e3fe41dcb231.tpe</tpe>
+  <tpe x="190" y="38" tpage="default_1.bz2">spr_door_unlocked_Estrella_685b2b4b-94d7-4808-a7c2-e3fe41dcb231.tpe</tpe>
+  <tpe x="190" y="74" tpage="default_1.bz2">spr_enemy_Estrella_4073924f-c4d3-42e6-acac-911e39d52528.tpe</tpe>
+  <tpe x="190" y="110" tpage="default_1.bz2">spr_eye_panel_Estrella_d3fc85e4-a660-406c-b355-f543c1d42ff3.tpe</tpe>
+  <tpe x="190" y="146" tpage="default_1.bz2">spr_spiked_wall_Estrella_cdd79adc-6e7b-45ad-b7da-b7fb34a001a2.tpe</tpe>
+  <tpe x="226" y="2" tpage="default_1.bz2">spr_stone_wall_Estrella_cdd79adc-6e7b-45ad-b7da-b7fb34a001a2.tpe</tpe>
+  <tpe x="226" y="38" tpage="default_1.bz2">spr_wall_Estrella_2c124a21-7437-4a24-8d62-061d7765f3bd.tpe</tpe>
+  <tpe x="226" y="74" tpage="default_1.bz2">spr_wallhurt_Estrella_2c124a21-7437-4a24-8d62-061d7765f3bd.tpe</tpe>
+  <tpe x="226" y="110" tpage="default_1.bz2">spr_eye_panel_Estrella_ddcde364-10af-402d-be5e-7b2454806d96.tpe</tpe>
+  <tpe x="226" y="143" tpage="default_1.bz2">spr_clock_Estrella_a37473ba-b814-4e64-af26-8c0df9decccf.tpe</tpe>
+  <tpe x="256" y="143" tpage="default_1.bz2">spr_player_l_Estrella_5da8a0eb-a260-4789-848f-1fd29e26f6b7.tpe</tpe>
+  <tpe x="262" y="2" tpage="default_1.bz2">spr_player_r_Estrella_5da8a0eb-a260-4789-848f-1fd29e26f6b7.tpe</tpe>
+  <tpe x="262" y="33" tpage="default_1.bz2">spr_player_l_Estrella_b4008a16-91f5-488b-a9bf-10377d0634ec.tpe</tpe>
+  <tpe x="262" y="63" tpage="default_1.bz2">spr_player_r_Estrella_b4008a16-91f5-488b-a9bf-10377d0634ec.tpe</tpe>
+  <tpe x="262" y="93" tpage="default_1.bz2">spr_player_d_Estrella_509fb558-4740-49af-82fa-38c9c8342ad6.tpe</tpe>
+  <tpe x="262" y="93" tpage="default_1.bz2">spr_player_d_Estrella_eecc5a28-dca5-4f4a-85d9-bec6d6abe4a0.tpe</tpe>
+  <tpe x="277" y="124" tpage="default_1.bz2">spr_player_u_Estrella_7b9c541a-35f6-4615-ad5f-736b635d8a02.tpe</tpe>
+  <tpe x="277" y="124" tpage="default_1.bz2">spr_player_u_Estrella_fd00b63d-9791-43b5-beaf-a1e5bbc05ea7.tpe</tpe>
+  <tpe x="277" y="155" tpage="default_1.bz2">spr_player_d_Estrella_7178eaf7-150b-4dd7-9ad8-e8e29d31f45a.tpe</tpe>
+  <tpe x="279" y="93" tpage="default_1.bz2">spr_player_d_Estrella_cc76a1d8-7b4a-4dd1-b316-44b70aa2c564.tpe</tpe>
+  <tpe x="283" y="2" tpage="default_1.bz2">spr_player_u_Estrella_05e56e3d-19fa-4149-b340-4f6fddbf660e.tpe</tpe>
+  <tpe x="283" y="32" tpage="default_1.bz2">spr_player_u_Estrella_967d83f0-8f9a-4979-86ff-3161980efe56.tpe</tpe>
+  <tpe x="283" y="62" tpage="default_1.bz2">spr_player_dead_Estrella_af5de253-9b68-46fc-87bf-3ad6dc7e972b.tpe</tpe>
+  <tpe x="296" y="78" tpage="default_1.bz2">spr_star_Estrella_022d836e-60fb-4df1-a8cd-ac05cd415362.tpe</tpe>
+  <tpe x="296" y="97" tpage="default_1.bz2">spr_floorboards_Estrella_1ecbe024-88bb-4c64-8691-1beec0b43679.tpe</tpe>
+  <tpe x="296" y="117" tpage="default_1.bz2">spr_lever_off_Estrella_ff27cfe2-dc77-47b0-93c8-3a5f6a5b42a8.tpe</tpe>
+  <tpe x="294" y="137" tpage="default_1.bz2">spr_lever_on_Estrella_ff27cfe2-dc77-47b0-93c8-3a5f6a5b42a8.tpe</tpe>
+</TextureGroup>
