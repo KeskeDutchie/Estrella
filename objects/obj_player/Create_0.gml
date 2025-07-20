@@ -9,10 +9,13 @@ hp = 100;
 hp_visual = 100;
 hp_delayed = 100;
 
-max_time = 3*60*60;
-time = 3*60*60;
+max_time = 20*4*60;
+time = max_time;
 
 death_anim_time = audio_sound_length(snd_death)*60;
+
+music_queue = mus_0;
+current_music = mus_0;
 
 function take_damage(damage) {
     hp -= damage;
@@ -20,7 +23,9 @@ function take_damage(damage) {
 
 function update_hp() {
     hp_visual = lerp(hp_visual, hp, 0.25);
+    hp_visual = clamp(hp_visual, 0, 100);
     hp_delayed = lerp(hp_delayed, hp, 0.05);
+    hp_delayed = clamp(hp_delayed, 0, 100);
 }
 
 light_id = light_check();
