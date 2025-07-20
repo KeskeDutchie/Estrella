@@ -9,7 +9,20 @@ hp = 100;
 hp_visual = 100;
 hp_delayed = 100;
 
-max_time = 30*60;
+red_timer = 0;
+
+bar_x = window_get_width()*(1/64);
+bar_y = window_get_height()*(1/3);
+bar_width = window_get_width()*(1/64);
+bar_height = window_get_height()*(1/3);
+border_padding = 8;
+
+outer_x = bar_x - border_padding;
+outer_y = bar_y - border_padding;
+outer_width = bar_width + border_padding * 2;
+outer_height = bar_height + border_padding * 2;
+
+max_time = 3*60*60;
 time = max_time;
 
 death_anim_time = audio_sound_length(snd_death)*60;
@@ -20,6 +33,10 @@ current_music_asset = mus_0;
 
 function take_damage(damage) {
     hp -= damage;
+    if (hp > 0) {
+        red_timer = 125;
+        audio_play_sound(snd_hurt, 0, false);
+    }
 }
 
 function update_hp() {

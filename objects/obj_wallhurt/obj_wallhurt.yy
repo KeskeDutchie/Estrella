@@ -8,8 +8,8 @@
   "name":"obj_wallhurt",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Terrain",
+    "path":"folders/Objects/Terrain.yy",
   },
   "parentObjectId":{
     "name":"obj_hurt",

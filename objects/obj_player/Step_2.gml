@@ -19,6 +19,7 @@ if (hp_visual > 0 && time > 0) {
 } else {
     if (time >= 0) {
         time = 0;
+        hp = 0;
         audio_stop_all();
         audio_play_sound(snd_death, 0, false);
         sprite_index = spr_player_dead;
