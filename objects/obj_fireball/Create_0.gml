@@ -1,5 +1,12 @@
 event_inherited();
 
+damage = 1;
+
+// Assigned when created
+my_arm = -1;        // Which arm I belong to
+my_index = -1;      // Which position I am in the arm
+my_controller = noone; // Reference to controller
+
 light_id = light_check();
 
 update_lights();
