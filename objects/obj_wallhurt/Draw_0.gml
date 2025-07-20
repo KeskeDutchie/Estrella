@@ -4,11 +4,13 @@ if (array_length(global.lights) > 0) {
     var u_lightCount     = shader_get_uniform(sh_light_elements, "u_lightCount");
     var u_lightPos       = shader_get_uniform(sh_light_elements, "u_lightPos");
     var u_lightIntensity = shader_get_uniform(sh_light_elements, "u_lightIntensity");
+    var u_lightColor = shader_get_uniform(sh_light_elements, "u_lightColor");
 
     shader_set_uniform_i(u_lightCount, array_length(global.lights));
 
     var posArray = [];
     var intensityArray = [];
+    var colorArray = [];
 
     var cam = view_camera[0];
     var cam_x = camera_get_view_x(cam);
@@ -41,10 +43,23 @@ if (array_length(global.lights) > 0) {
 
 	    array_push(posArray, screen_x, screen_y);
 	    array_push(intensityArray, max(pixel_intensity, 1));
+		
+		var c = global.light_colors[i];
+
+	    if (!is_array(c) || array_length(c) < 3) {
+	        continue; // skip invalid color entries
+	    }
+
+	    var red = c[0];
+	    var green = c[1];
+	    var blue = c[2];
+
+	    array_push(colorArray, red, green, blue);
 	}
 
     shader_set_uniform_f_array(u_lightPos, posArray);
     shader_set_uniform_f_array(u_lightIntensity, intensityArray);
+    shader_set_uniform_f_array(u_lightColor, colorArray);
 
     draw_self();
 

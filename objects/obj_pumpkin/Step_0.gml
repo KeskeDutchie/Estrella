@@ -35,3 +35,4 @@ switch (look_direction) {
         x += move_speed;
         break;
 }
+depth = -y + room_height * 0.4;

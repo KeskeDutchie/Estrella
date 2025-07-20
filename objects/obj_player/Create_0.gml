@@ -10,6 +10,7 @@ hp_visual = 100;
 hp_delayed = 100;
 
 red_timer = 0;
+green_timer = 0;
 
 bar_x = window_get_width()*(1/64);
 bar_y = window_get_height()*(1/3);
@@ -26,6 +27,7 @@ max_time = 3*60*60;
 time = max_time;
 
 death_anim_time = audio_sound_length(snd_death)*60;
+death_message = spr_death_message;
 
 // music_queue = mus_0;
 current_music = audio_play_sound(mus_0, 0, true);
@@ -33,10 +35,17 @@ current_music_asset = mus_0;
 
 function take_damage(damage) {
     hp -= damage;
-    if (hp > 0) {
+    if (hp > 0 && damage > 0) {
         red_timer = 125;
+		green_timer = 0;
         audio_play_sound(snd_hurt, 0, false);
     }
+	else if (hp > 0)
+	{
+		green_timer = 125;
+		red_timer = 0;
+	}
+	hp = clamp(hp, -100, 100);
 }
 
 function update_hp() {
@@ -52,6 +61,7 @@ function update_lights() {
 	if (array_length(global.lights) <= light_id) return;
 	global.lights[light_id] = [x, y];
 	global.intensities[light_id] = 50;
+	global.light_colors[light_id] = [1,1,1];
 }
 
 function draw_clock(x, y, radius, percent, col) {
@@ -100,7 +110,6 @@ function changeSong(song_asset) {
 
     current_music_asset = song_asset;
 }
-
 
 function getSongLength(song_asset) {
     return audio_sound_length(song_asset);

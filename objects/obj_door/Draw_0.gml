@@ -1,14 +1,16 @@
-if (array_length(global.lights) > 0) {
+if (array_length(global.lights) > 0 && solid) {
     shader_set(sh_light_elements);
 
     var u_lightCount     = shader_get_uniform(sh_light_elements, "u_lightCount");
     var u_lightPos       = shader_get_uniform(sh_light_elements, "u_lightPos");
     var u_lightIntensity = shader_get_uniform(sh_light_elements, "u_lightIntensity");
+    var u_lightColor = shader_get_uniform(sh_light_elements, "u_lightColor");
 
     shader_set_uniform_i(u_lightCount, array_length(global.lights));
 
     var posArray = [];
     var intensityArray = [];
+    var colorArray = [];
 
     var cam = view_camera[0];
     var cam_x = camera_get_view_x(cam);
@@ -41,22 +43,32 @@ if (array_length(global.lights) > 0) {
 
 	    array_push(posArray, screen_x, screen_y);
 	    array_push(intensityArray, max(pixel_intensity, 1));
+		
+		var c = global.light_colors[i];
+
+	    if (!is_array(c) || array_length(c) < 3) {
+	        continue; // skip invalid color entries
+	    }
+
+	    var red = c[0];
+	    var green = c[1];
+	    var blue = c[2];
+
+	    array_push(colorArray, red, green, blue);
 	}
 
     shader_set_uniform_f_array(u_lightPos, posArray);
     shader_set_uniform_f_array(u_lightIntensity, intensityArray);
+    shader_set_uniform_f_array(u_lightColor, colorArray);
 	
-    if (solid) {draw_sprite_ext(spr_door_locked, 0, x, y, image_xscale, image_yscale, image_angle, c_white, 1)}
-	if (!solid) {draw_sprite_ext(spr_door_unlocked, 0, x, y, image_xscale, image_yscale, image_angle, c_white, 1)}
-
-
-    shader_reset();
+    draw_sprite_ext(spr_door_locked, 0, x, y, image_xscale, image_yscale, image_angle, c_white, 1);
 }
 else {
     if (solid) {draw_sprite_ext(spr_door_locked, 0, x, y, image_xscale, image_yscale, image_angle, c_white, 1)}
 	if (!solid) {draw_sprite_ext(spr_door_unlocked, 0, x, y, image_xscale, image_yscale, image_angle, c_white, 1)}
 }
 
+shader_reset();
 
 if (linked_lever.powered && solid) 
 {

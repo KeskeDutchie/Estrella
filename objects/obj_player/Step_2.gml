@@ -18,6 +18,7 @@ if (hp_visual > 0 && time > 0) {
     // }
 } else {
     if (time >= 0) {
+		if (time == 0) death_message = spr_timeup_message;
         time = 0;
         hp = 0;
         audio_stop_all();

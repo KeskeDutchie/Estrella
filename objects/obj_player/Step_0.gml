@@ -66,4 +66,4 @@ if (_interact_input && place_meeting(x, y, obj_lever) && !obj_lever.powered) {
 	audio_play_sound(snd_activate, 0, false);
 }
 
-depth = -y + room_height * 0.5;
+depth = -y + room_height * 0.4;

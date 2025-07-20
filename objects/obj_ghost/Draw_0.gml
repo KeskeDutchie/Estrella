@@ -54,4 +54,4 @@ else {
     draw_self();
 }
 
-draw_sprite_ext(spr_ghost_eyes, image_index, x, y, image_xscale, 1, 0, c_white, 0.4);
+draw_sprite_ext((sprite_index == spr_ghost_laugh)? spr_ghost_laugh_eyes : spr_ghost_eyes, image_index, x, y, image_xscale, 1, 0, c_white, 0.4);
