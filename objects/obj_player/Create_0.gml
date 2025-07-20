@@ -9,13 +9,14 @@ hp = 100;
 hp_visual = 100;
 hp_delayed = 100;
 
-max_time = 20*4*60;
+max_time = 30*60;
 time = max_time;
 
 death_anim_time = audio_sound_length(snd_death)*60;
 
-music_queue = mus_0;
-current_music = mus_0;
+// music_queue = mus_0;
+current_music = audio_play_sound(mus_0, 0, true);
+current_music_asset = mus_0;
 
 function take_damage(damage) {
     hp -= damage;
@@ -63,4 +64,27 @@ function draw_clock(x, y, radius, percent, col) {
 function reset() {
 	reset_lights();
     room_restart();
+}
+
+function changeSong(song_asset) {
+    if (song_asset == current_music_asset) return;
+
+    // Get normalized progress through the current song (0.0 to 1.0)
+    var current_progress = audio_sound_get_track_position(current_music) / getSongLength(current_music_asset);
+    current_progress = clamp(current_progress, 0, 1); // Safety
+
+    // Stop old music
+    audio_stop_sound(current_music);
+
+    // Play new music and sync to same progress point
+    current_music = audio_play_sound(song_asset, 0, true);
+    var new_pos = current_progress * getSongLength(song_asset);
+    audio_sound_set_track_position(current_music, new_pos);
+
+    current_music_asset = song_asset;
+}
+
+
+function getSongLength(song_asset) {
+    return audio_sound_length(song_asset);
 }
