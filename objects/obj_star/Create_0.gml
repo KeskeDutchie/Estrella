@@ -9,3 +9,5 @@ duration = 90;
 
 anim_time = 0;
 anim_neg = false;
+
+obj_player.total_star_count++;

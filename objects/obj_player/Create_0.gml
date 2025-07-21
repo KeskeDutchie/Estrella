@@ -26,6 +26,9 @@ outer_height = bar_height + border_padding * 2;
 max_time = 3*60*60;
 time = max_time;
 
+total_star_count = 0;
+current_star_count = 0;
+
 death_anim_time = audio_sound_length(snd_death)*60;
 death_message = spr_death_message;
 

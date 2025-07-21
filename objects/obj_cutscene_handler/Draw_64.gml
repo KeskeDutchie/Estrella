@@ -25,8 +25,10 @@ if (transition_time >= total_transition_time*0.5 && transition_time <= total_tra
     }
 }
 
-if (current_frame >= sprite_get_number(asset_get_index("spr_" + scene)))
+if (current_frame >= sprite_get_number(asset_get_index("spr_" + scene))) {
+    audio_stop_all();
     room_goto_next();
+}
 
 draw_sprite_ext(asset_get_index("spr_" + scene),
     current_frame,
