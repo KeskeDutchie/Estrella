@@ -114,3 +114,8 @@ function changeSong(song_asset) {
 function getSongLength(song_asset) {
     return audio_sound_length(song_asset);
 }
+
+function setMaxTime(max_time_in_seconds) {
+    max_time = max_time_in_seconds*60;
+    time = max_time;
+}

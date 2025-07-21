@@ -24,7 +24,7 @@
   ],
   "name":"spr_victory",
   "nineSlice":null,
-  "origin":0,
+  "origin":1,
   "parent":{
     "name":"GUI",
     "path":"folders/Sprites/GUI.yy",
@@ -78,7 +78,7 @@
     ],
     "visibleRange":null,
     "volume":1.0,
-    "xorigin":0,
+    "xorigin":128,
     "yorigin":0,
   },
   "swatchColours":null,

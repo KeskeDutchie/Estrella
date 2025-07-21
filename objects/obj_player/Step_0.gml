@@ -42,6 +42,9 @@ else
 		_sprite = spr_player_d
 	}
 	sprite_index = _sprite;
+	// if (image_index % 2 == 0) {
+	// 	audio_play_sound(snd_step, 0, false);
+	// }
 }
 
 if (!place_free(x + x_velocity, y)) {
