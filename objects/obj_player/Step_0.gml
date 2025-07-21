@@ -61,8 +61,8 @@ if (!place_free(x, y + y_velocity)) {
 x += x_velocity;
 y += y_velocity;
 
-if (_interact_input && place_meeting(x, y, obj_lever) && !obj_lever.powered) {
-	obj_lever.powered = true;
+if (_interact_input && place_meeting(x, y, obj_lever) && !instance_nearest(x, y, obj_lever).powered) {
+	instance_nearest(x, y, obj_lever).powered = true;
 	audio_play_sound(snd_activate, 0, false);
 }
 
