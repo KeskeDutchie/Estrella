@@ -25,7 +25,10 @@ if (transition_time >= total_transition_time*0.5 && transition_time <= total_tra
     }
 }
 
-if (current_frame >= sprite_get_number(asset_get_index("spr_" + scene))) {
+var sprite_asset = spr_intro;
+if (room == rm_victory) sprite_asset = spr_victory;
+
+if (current_frame >= sprite_get_number(sprite_asset)) {
     audio_stop_all();
     if (scene == "victory") {
         room_goto(rm_title);
@@ -34,12 +37,12 @@ if (current_frame >= sprite_get_number(asset_get_index("spr_" + scene))) {
     }
 }
 
-draw_sprite_ext(asset_get_index("spr_" + scene),
+draw_sprite_ext(sprite_asset,
     current_frame,
     display_get_gui_width()*0.5,
     0,
-    display_get_gui_height()/sprite_get_height(asset_get_index("spr_" + scene)),
-    display_get_gui_height()/sprite_get_height(asset_get_index("spr_" + scene)),
+    display_get_gui_height()/sprite_get_height(sprite_asset),
+    display_get_gui_height()/sprite_get_height(sprite_asset),
     0,
     make_color_rgb(transition_color, transition_color, transition_color),
     1);
