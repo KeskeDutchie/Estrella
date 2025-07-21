@@ -1,4 +1,4 @@
-next_room = rm_test;
+next_room = room_next(room);
 transitioning = false;
 transition_timer = 0;
 total_transition_timer = 60;

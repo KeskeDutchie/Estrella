@@ -27,7 +27,11 @@ if (transition_time >= total_transition_time*0.5 && transition_time <= total_tra
 
 if (current_frame >= sprite_get_number(asset_get_index("spr_" + scene))) {
     audio_stop_all();
-    room_goto_next();
+    if (scene == "victory") {
+        room_goto(rm_title);
+    } else {
+        room_goto_next();
+    }
 }
 
 draw_sprite_ext(asset_get_index("spr_" + scene),
@@ -39,3 +43,5 @@ draw_sprite_ext(asset_get_index("spr_" + scene),
     0,
     make_color_rgb(transition_color, transition_color, transition_color),
     1);
+
+draw_sprite_ext(spr_skipz, 0, 0, display_get_gui_height(), 1, 1, 0, make_color_rgb(255, 255, 255-(keyboard_check(ord("Z"))*255)), 1);
