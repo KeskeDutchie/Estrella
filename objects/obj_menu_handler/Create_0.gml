@@ -11,6 +11,8 @@ light_id_0 = light_check();
 light_id_1 = light_check();
 light_id_2 = light_check();
 
+audio_play_sound(mus_menu, 0, true);
+
 function update_lights() {
 	if (array_length(global.lights) <= light_id_0) return;
 	global.lights[light_id_0] = [option_x[selected] + sprite_get_width(option_sprites[selected]) * 0.5
