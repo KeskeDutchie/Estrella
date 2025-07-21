@@ -9,7 +9,7 @@ function update_light()
 			global.lights[light_id] = [x, y - 16];
 			break;
 		case 90:
-			global.lights[light_id] = [x - 16, y];
+			global.lights[light_id] = [x - 16 * image_yscale, y];
 			break;
 		case 180 | -180:
 			global.lights[light_id] = [x, y + 16];

@@ -3,9 +3,9 @@ varying vec2 v_vTexcoord;
 varying vec4 v_vColour;
 
 uniform int u_lightCount;
-uniform vec2 u_lightPos[64];
-uniform float u_lightIntensity[64];
-uniform vec3 u_lightColor[64];
+uniform vec2 u_lightPos[128];
+uniform float u_lightIntensity[128];
+uniform vec3 u_lightColor[128];
 
 vec4 color;
 
@@ -16,7 +16,7 @@ void main() {
 
     float brightness = 0.0;
 
-    for (int i = 0; i < 64; i++) {
+    for (int i = 0; i < 128; i++) {
         if (i >= u_lightCount) break;
 
         float dist = distance(fragPos, u_lightPos[i]);

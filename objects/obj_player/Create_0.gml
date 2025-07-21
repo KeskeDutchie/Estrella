@@ -49,6 +49,10 @@ function take_damage(damage) {
 		red_timer = 0;
 	}
 	hp = clamp(hp, -100, 100);
+	
+	if (instance_exists(obj_stairs))
+		if (obj_stairs.transitioning)
+			hp = clamp(hp, 0.1, hp);
 }
 
 function update_hp() {
