@@ -2,7 +2,7 @@ triggered = place_meeting(x,y,obj_player);
 image_index = triggered;
 
 if (triggered) {
-	layer_set_visible(1, true);
+	layer_set_visible(layer_get_id("Shine"), true);
 	if (!played_sound) {
 		audio_stop_sound(snd_hide);
 		audio_play_sound(snd_reveal, 0, false);
@@ -25,6 +25,6 @@ if (triggered) {
 	}
 	if (!_any_triggered)
 	{
-		layer_set_visible(1, false);
+		layer_set_visible(layer_get_id("Shine"), false);
 	}
 }

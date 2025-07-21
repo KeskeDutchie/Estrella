@@ -12,10 +12,10 @@ hp_delayed = 100;
 red_timer = 0;
 green_timer = 0;
 
-bar_x = window_get_width()*(1/64);
-bar_y = window_get_height()*(1/3);
-bar_width = window_get_width()*(1/64);
-bar_height = window_get_height()*(1/3);
+bar_x = display_get_gui_width()*(1/64);
+bar_y = display_get_gui_height()*(1/3);
+bar_width = display_get_gui_width()*(1/64);
+bar_height = display_get_gui_height()*(1/3);
 border_padding = 8;
 
 outer_x = bar_x - border_padding;

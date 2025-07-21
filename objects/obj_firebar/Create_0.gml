@@ -21,15 +21,18 @@ function create_fire_arm(_fireball_count, _length, _angle_start, _speed, _clockw
     array_push(arms, arm);
 }
 
-for (var i = 0; i < array_length(arms); i++) {
-    var arm = arms[i];
-    fireballs[i] = [];
+	function init()
+	{
+		for (var i = 0; i < array_length(arms); i++) {
+		    var arm = arms[i];
+		    fireballs[i] = [];
 
-    for (var j = 0; j < arm.fireballs; j++) {
-        var inst = instance_create_depth(x, y, depth - 1, obj_fireball);
-        inst.my_arm = i;
-        inst.my_index = j;
-        inst.my_controller = id;
-        fireballs[i][j] = inst;
-    }
+		    for (var j = 0; j < arm.fireballs; j++) {
+		        var inst = instance_create_depth(x, y, depth - 1, obj_fireball);
+		        inst.my_arm = i;
+		        inst.my_index = j;
+		        inst.my_controller = id;
+		        fireballs[i][j] = inst;
+		    }
+	}
 }

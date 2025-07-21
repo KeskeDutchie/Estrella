@@ -1,0 +1,1 @@
+selected = (selected + 1) % array_length(option_sprites);
