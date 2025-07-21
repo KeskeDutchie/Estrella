@@ -18,6 +18,8 @@ draw_set_color(c_white)
 draw_sprite_ext(spr_stars_icon, 0, display_get_gui_width(), 0, 2, 2, 0, c_white, 1);
 draw_set_font(fnt_default);
 draw_text(display_get_gui_width()-110, 0, string_concat(current_star_count, "/", total_star_count));
+
+draw_sprite_ext(spr_time_icon, 0, 0, 64, 2, 2, 0, c_white, 1);
 //draw_text(window_get_width()*(2/64), window_get_height()*(1/2), string_concat(clamp(hp_visual, 0, 100), "%"));
 
 draw_clock(32, 32, 32, (time/max_time), c_white);
