@@ -3,8 +3,8 @@ if (!movement_enabled) {return;}
 var _hor_input, _ver_input, _sprint_input, _interact_input;
 _hor_input = (keyboard_check(ord("D")) || keyboard_check(vk_right))-(keyboard_check(ord("A")) || keyboard_check(vk_left));
 _ver_input = (keyboard_check(ord("S")) || keyboard_check(vk_down))-(keyboard_check(ord("W")) || keyboard_check(vk_up));
-_sprint_input = keyboard_check(vk_shift) + 1;
-_interact_input = keyboard_check(ord("Z"));
+_sprint_input = (keyboard_check(ord("X")) || keyboard_check(vk_shift)) + 1;
+_interact_input = keyboard_check(ord("Z")) || keyboard_check(vk_space);
 
 var _len = sqrt(sqr(_hor_input) + sqr(_ver_input));
 

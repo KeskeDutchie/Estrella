@@ -1,1 +1,1 @@
-setMaxTime(120);
+setMaxTime(100);
